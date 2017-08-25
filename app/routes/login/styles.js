@@ -8,6 +8,10 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
+  titleText: {
+    color: '#FFF',
+    fontSize: 26,
+  },
   textInput: {
     color: '#FFF',
     fontSize: 16,
@@ -28,5 +32,23 @@ export default StyleSheet.create({
     marginTop: 20,
     marginLeft: 35,
     marginRight: 35,
+  },
+  loginButtonText: {
+    color: 'white',
+  },
+  signupButton: {
+    backgroundColor: 'rgba(255,255,255,0.25)',
+    borderRadius: 6,
+    marginTop: 20,
+    marginLeft: 35,
+    marginRight: 35,
+  },
+  signupButtonText: {
+    color: '#FFF',
+  },
+  dividerText: {
+    color: '#FFF',
+    fontSize: 16,
+    marginTop: 20,
   }
 });

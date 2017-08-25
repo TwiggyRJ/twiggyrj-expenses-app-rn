@@ -7,7 +7,6 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   buttonText: {
-    color: 'white',
     fontSize: 16,
     fontWeight: '500',
   },
