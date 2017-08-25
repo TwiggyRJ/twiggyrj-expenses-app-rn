@@ -5,7 +5,6 @@ export default StyleSheet.create({
     paddingVertical: 20,
     alignSelf: "stretch",
     alignItems: 'center',
-    borderColor: 'rgba(0,0,0,0.75)'
   },
   buttonText: {
     color: 'white',

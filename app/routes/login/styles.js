@@ -9,17 +9,24 @@ export default StyleSheet.create({
     backgroundColor: '#F5FCFF',
   },
   textInput: {
-    height: 40,
+    color: '#FFF',
+    fontSize: 16,
+    textDecorationLine: 'none',
+    height: 50,
     marginTop: 20,
     backgroundColor: 'rgba(255,255,255,0.25)',
     alignSelf: "stretch",
     marginLeft: 35,
     marginRight: 35,
-    borderRadius: 6
+    borderRadius: 6,
+    paddingLeft: 15,
   },
   loginButton: {
+    borderColor: 'rgba(255,255,255,0.75)',
+    borderRadius: 6,
+    borderWidth: 1,
     marginTop: 20,
-    marginLeft: 25,
-    marginRight: 25,
+    marginLeft: 35,
+    marginRight: 35,
   }
 });

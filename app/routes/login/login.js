@@ -9,9 +9,9 @@ const Login = (props) => {
   return (
     <View style={styles.container}>
       <BGVideo video={videos.loginBackground}/>
-      <TextInput style={styles.textInput} placeholder={'Enter email address'} placeholderTextColor={"#FFF"} />
-      <TextInput style={styles.textInput} placeholder={'Enter password'} placeholderTextColor={"#FFF"} secureTextEntry={true} />
-      <Button style={styles.loginButton} text="Sign In" onPress={() => props.authenticate('Foo', 'Bar')}/>
+      <TextInput style={styles.textInput} underlineColorAndroid='rgba(0,0,0,0)' placeholder={'Enter email address'} placeholderTextColor={"#FFF"} />
+      <TextInput style={styles.textInput} underlineColorAndroid='rgba(0,0,0,0)' placeholder={'Enter password'} placeholderTextColor={"#FFF"} secureTextEntry={true} />
+      <Button style={styles.loginButton} customStyles={ styles.loginButton } text="Sign In" onPress={() => props.authenticate('Foo', 'Bar')}/>
     </View>
   );
 };
