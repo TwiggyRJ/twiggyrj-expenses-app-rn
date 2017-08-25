@@ -8,14 +8,18 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
+  textInput: {
+    height: 40,
+    marginTop: 20,
+    backgroundColor: 'rgba(255,255,255,0.25)',
+    alignSelf: "stretch",
+    marginLeft: 35,
+    marginRight: 35,
+    borderRadius: 6
   },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+  loginButton: {
+    marginTop: 20,
+    marginLeft: 25,
+    marginRight: 25,
+  }
 });

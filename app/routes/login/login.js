@@ -1,20 +1,16 @@
 import React from 'react';
 import { Text, View, Image, TextInput } from 'react-native';
 import styles from './styles';
+import BGVideo from '../../components/bg-video/index';
+import Button from '../../components/button/index';
 
 const Login = (props) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.welcome}>
-        Welcome to React Native!
-      </Text>
-      <Text style={styles.instructions}>
-        To get started, edit index.android.js
-      </Text>
-      <Text style={styles.instructions}>
-        Double tap R on your keyboard to reload,{'\n'}
-        Shake or press menu button for dev menu
-      </Text>
+      <BGVideo />
+      <TextInput style={styles.textInput} placeholder={'Enter email address'} placeholderTextColor={"#FFF"} />
+      <TextInput style={styles.textInput} placeholder={'Enter password'} placeholderTextColor={"#FFF"} secureTextEntry={true} />
+      <Button style={styles.loginButton} text="Sign In" onPress={() => props.authenticate('Foo', 'Bar')}/>
     </View>
   );
 };
