@@ -20,7 +20,7 @@ class RegisterContainer extends Component {
 
   render() {
     return (
-      <Register authenticate={ this.props.onAuthenticate.bind(this) }/>
+      <Register register={ this.props.onRegister.bind(this) }/>
     );
   }
 }
@@ -35,7 +35,7 @@ const mapStateToProps = (state, ownProps) => {
 // Maps actions to props
 const mapDispatchToProps = (dispatch) => {
   return {
-    onAuthenticate: (email, password) => dispatch(usersActions.authenticate(email, password)),
+    onRegister: (name, email, password) => dispatch(usersActions.register(name, email, password)),
   }
 };
 

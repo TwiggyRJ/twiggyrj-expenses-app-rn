@@ -8,6 +8,12 @@ export default StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
+  image: {
+        width: null,
+        height: null,
+        flex: 1,
+        resizeMode: 'cover',
+    },
   titleText: {
     color: '#FFF',
     fontSize: 26,

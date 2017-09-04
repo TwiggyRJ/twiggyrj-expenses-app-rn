@@ -13,7 +13,7 @@ const Register = (props) => {
       <TextInput style={styles.textInput} underlineColorAndroid='rgba(0,0,0,0)' placeholder={'Full Name'} placeholderTextColor={"#FFF"} />
       <TextInput style={styles.textInput} underlineColorAndroid='rgba(0,0,0,0)' placeholder={'Email address'} placeholderTextColor={"#FFF"} />
       <TextInput style={styles.textInput} underlineColorAndroid='rgba(0,0,0,0)' placeholder={'Password'} placeholderTextColor={"#FFF"} secureTextEntry={true} />
-      <Button style={styles.loginButton} customStyles={ styles.loginButton } textStyles={ styles.loginButtonText } text="Sign Up" onPress={() => props.authenticate('Foo', 'Bar')}/>
+      <Button style={styles.loginButton} customStyles={ styles.loginButton } textStyles={ styles.loginButtonText } text="Sign Up" onPress={() => props.register('Aaron Fryer', 'Foo', 'Bar')}/>
     </View>
   );
 };
