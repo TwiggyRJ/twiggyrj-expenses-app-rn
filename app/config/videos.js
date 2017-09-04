@@ -1,5 +1,5 @@
 const videos = {
-  loginBackground: require('../videos/background.mp4')
+  loginBackground: require('../videos/loginBackground.mp4')
 };
 
 export default videos;
