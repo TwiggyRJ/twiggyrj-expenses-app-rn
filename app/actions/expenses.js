@@ -10,6 +10,7 @@ export const getExpenseSuccess = (expense) => {
 }
 
 export const getExpensesSuccess = (expenses) => {
+  console.log(expenses)
   return {
     type: GET_EXPENSES_SUCCESS,
     expenses
@@ -17,7 +18,7 @@ export const getExpensesSuccess = (expenses) => {
 }
 
 //Our function that is initiated from the GUI
-export function getExpenses(email, password) {
+export function getExpenses() {
   return dispatch => {
     let data = {
       expenses : [
@@ -44,7 +45,7 @@ export function getExpenses(email, password) {
           user_id: 1
         }
       ]
-    }
+    };
     dispatch(getExpensesSuccess(data.expenses))
   }
 }
