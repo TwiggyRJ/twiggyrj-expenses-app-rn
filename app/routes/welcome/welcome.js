@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, TextInput, ListView } from 'react-native';
+import { Text, View, Image, TextInput, FlatList } from 'react-native';
 import styles from './styles';
 import videos from '../../config/videos';
 import images from '../../config/images';
@@ -16,9 +16,11 @@ const Welcome = (props) => {
       <Button style={styles.signupButton} customStyles={ styles.button } textStyles={ styles.signupButtonText } text="View all Expenses" onPress={() => {}}/>
       {
         props.expenses ?
-          <ListView
-            dataSource={props.expenses}
-            renderRow={(rowData) => <Text>{rowData.expense}</Text>}/>
+          <FlatList
+            style={{}}
+            key="expensesList"
+            data={props.expenses}
+            renderItem={({item}) => <Text style={{fontSize: 26, color: '#fff'}} key={item.id}>{item.expense} : { "£" + item.amount}</Text>}/>
         : null
       }
     </View>

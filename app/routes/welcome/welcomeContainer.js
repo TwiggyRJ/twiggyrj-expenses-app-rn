@@ -18,7 +18,7 @@ class WelcomeContainer extends Component {
     }
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.onGetExpenses();
     this.forceUpdate();
   }
@@ -28,7 +28,6 @@ class WelcomeContainer extends Component {
   }
 
   componentDidUpdate() {
-    console.log(this.props.expenses)
     if (!_.isEqual(this.props.expenses, this.state.expenses)) {
       console.log("Things have changed");
       this.setState({expenses: this.props.expenses});
@@ -36,7 +35,7 @@ class WelcomeContainer extends Component {
   }
 
   render() {
-    if (this.props.expenses) {
+    if (this.state.expenses) {
       return (
         <Welcome user={this.props.users} expenses={this.state.expenses}/>
       );
@@ -53,7 +52,8 @@ class WelcomeContainer extends Component {
 // Maps state from store to props
 const mapStateToProps = (state, ownProps) => {
   return {
-    expenses: state.expenses
+    expenses: state.expenses,
+    users: state.users
   }
 };
 

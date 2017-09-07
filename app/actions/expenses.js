@@ -10,7 +10,6 @@ export const getExpenseSuccess = (expense) => {
 }
 
 export const getExpensesSuccess = (expenses) => {
-  console.log(expenses)
   return {
     type: GET_EXPENSES_SUCCESS,
     expenses
