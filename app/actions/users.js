@@ -1,5 +1,6 @@
 import { AUTHENTICATE_SUCCESS, REGISTER_SUCCESS } from './actions';
-import apiClient from '../config/client.js';
+import { api, credentials } from '../config/client';
+import { getToken } from '../lib/oauth';
 
 //Sends data to reducer with this action
 export const authenticateSuccess = (users) => {
@@ -19,13 +20,28 @@ export const registerSuccess = (users) => {
 //Our function that is initiated from the GUI
 export function authenticate(email, password) {
   return dispatch => {
-    console.log('API Client OBJ')
-    console.log(apiClient)
-    apiClient.owner.getToken(email, password).then((user) => {
-	console.log(user)
-      let data = { email: email, password: password };
-      dispatch(authenticateSuccess(user))
+    let token = getToken(email, password);
+    api.post('/oauth/token',
+    {
+        client_id: '3',
+        client_secret: 'klQVZFUCYh4OqDdfuXw5qpTjClDRWNVsrqJfiaaO',
+        grant_type : 'password',
+        username: email,
+        password: password,
+    }).then((res) => {
+      api.get('/api/user',
+      {
+        headers: {
+          'Authorization' : `Bearer ${res.data.access_token}`,
+        }
+      }).then((response) => {
+        dispatch(authenticateSuccess(response.data))
+      }).catch((error) => {
+        console.log(error);
+        console.log(credentials)
+      });
     });
+
   }
 }
 
