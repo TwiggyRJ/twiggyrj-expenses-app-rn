@@ -42,6 +42,50 @@ export function getExpenses() {
           date: '2017-08-30',
           recurring_date: 0,
           user_id: 1
+        },
+        {
+          id: 3,
+          expense: 'Train Fare to Bristol',
+          type: 'Payment',
+          account: 'Current Account',
+          recipient: 'Network Rail',
+          amount: 24.50,
+          date: '2017-09-02',
+          recurring_date: 0,
+          user_id: 1
+        },
+        {
+          id: 4,
+          expense: 'Lunch',
+          type: 'Payment',
+          account: 'Current Account',
+          recipient: 'McDonalds',
+          amount: 6.75,
+          date: '2017-09-05',
+          recurring_date: 0,
+          user_id: 1
+        },
+        {
+          id: 5,
+          expense: 'Groceries',
+          type: 'Payment',
+          account: 'Current Account',
+          recipient: 'Asda',
+          amount: 23.91,
+          date: '2017-09-07',
+          recurring_date: 0,
+          user_id: 1
+        },
+        {
+          id: 6,
+          expense: 'Sonic Mania',
+          type: 'Payment',
+          account: 'Current Account',
+          recipient: 'Sony PSN',
+          amount: 15.00,
+          date: '2017-09-10',
+          recurring_date: 0,
+          user_id: 1
         }
       ]
     };
