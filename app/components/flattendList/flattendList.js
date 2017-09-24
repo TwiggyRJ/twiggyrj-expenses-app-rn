@@ -1,12 +1,12 @@
 import React from 'react';
 import { Dimensions, FlatList, Text, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
-import Item from './item';
+import ListItem from '../listItem';
 
-const List = (props) => {
+const FlattendList = (props) => {
   return (
     <FlatList
-      style={{width: Dimensions.get('window').width, paddingLeft: 40, paddingRight: 40, marginTop: 20}}
+      style={styles.list}
       key="expensesList"
       data={props.items}
       keyExtractor={(item, index) => item.id}
@@ -14,8 +14,8 @@ const List = (props) => {
   );
 };
 
-List.propTypes = {
+FlattendList.propTypes = {
 
 };
 
-export default List;
+export default FlattendList;

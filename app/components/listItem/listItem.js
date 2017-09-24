@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 
-export default class Item extends Component {
+export default class ListItem extends Component {
 
   constructor(props) {
     super(props);

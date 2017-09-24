@@ -86,6 +86,17 @@ export function getExpenses() {
           date: '2017-09-10',
           recurring_date: 0,
           user_id: 1
+        },
+        {
+          id: 7,
+          expense: 'Wages',
+          type: 'Income',
+          account: 'Current Account',
+          recipient: 'Aaron Freyr',
+          amount: 1000.00,
+          date: '2017-09-26',
+          recurring_date: 26,
+          user_id: 1
         }
       ]
     };
