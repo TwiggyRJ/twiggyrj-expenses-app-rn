@@ -22,7 +22,7 @@ export default StyleSheet.create({
       resizeMode: 'cover',
   },
   titleText: {
-    color: '#FFF',
+    color: '#333',
     fontSize: 26,
   },
   textInput: {
@@ -42,10 +42,10 @@ export default StyleSheet.create({
     color: 'white',
   },
   signupButtonText: {
-    color: '#FFF',
+    color: '#333',
   },
   dividerText: {
-    color: '#FFF',
+    color: '#333',
     fontSize: 16,
     marginTop: 20,
   }
