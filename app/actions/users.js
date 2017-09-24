@@ -1,6 +1,7 @@
+import Config from 'react-native-config';
 import { AUTHENTICATE_SUCCESS, REGISTER_SUCCESS } from './actions';
-import { api, credentials } from '../config/client';
-import { getToken } from '../lib/oauth';
+import { api } from '../config/client';
+import store from 'react-native-simple-store';
 
 //Sends data to reducer with this action
 export const authenticateSuccess = (users) => {
@@ -20,15 +21,15 @@ export const registerSuccess = (users) => {
 //Our function that is initiated from the GUI
 export function authenticate(email, password) {
   return dispatch => {
-    let token = getToken(email, password);
     api.post('/oauth/token',
     {
-        client_id: '3',
-        client_secret: 'klQVZFUCYh4OqDdfuXw5qpTjClDRWNVsrqJfiaaO',
-        grant_type : 'password',
-        username: email,
-        password: password,
+      client_id: Config.CLIENT_ID,
+      client_secret: Config.CLIENT_SECRET,
+      grant_type : 'password',
+      username: email,
+      password: password,
     }).then((res) => {
+      store.update('tokens', res.data);
       api.get('/api/user',
       {
         headers: {

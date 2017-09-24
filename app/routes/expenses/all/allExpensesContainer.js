@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Text, View, Image, TextInput, ListView } from 'react-native';
-import Welcome from './welcome';
-import Routes from '../../config/routes';
+import AllExpenses from './allExpenses';
+import Routes from '../../../config/routes';
 import _ from 'lodash';
-import * as expensesActions from '../../actions/expenses';
+import * as expensesActions from '../../../actions/expenses';
 
-class WelcomeContainer extends Component {
-  static navigatorStyle = {
-  	navBarHidden: true
-  };
+class AllExpensesContainer extends Component {
 
   constructor(props) {
     super(props);
@@ -37,12 +34,12 @@ class WelcomeContainer extends Component {
   render() {
     if (this.state.expenses) {
       return (
-        <Welcome user={this.props.users} expenses={this.state.expenses} navigator={this.props.navigator}/>
+        <AllExpenses expenses={this.state.expenses}/>
       );
     } else {
       return (
         <View>
-          <Text>No Data</Text>
+          <Text>You have no expenses</Text>
         </View>
       );
     }
@@ -64,4 +61,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(WelcomeContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(AllExpensesContainer);

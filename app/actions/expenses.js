@@ -1,5 +1,5 @@
 import { GET_EXPENSE_SUCCESS, GET_EXPENSES_SUCCESS } from './actions';
-import apiClient from '../config/client.js';
+import store from 'react-native-simple-store';
 
 //Sends data to reducer with this action
 export const getExpenseSuccess = (expense) => {
