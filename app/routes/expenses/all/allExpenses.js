@@ -1,8 +1,8 @@
 import React from 'react';
 import { Dimensions, FlatList, Image, ScrollView, Text, View, TouchableWithoutFeedback } from 'react-native';
-import styles from './styles';
+import { listStyles, styles } from './styles';
 import Header from '../../../components/header';
-import List from '../../../components/list';
+import FlattendList from '../../../components/flattendList';
 
 const AllExpenses = (props) => {
   return (
@@ -11,7 +11,7 @@ const AllExpenses = (props) => {
       <View style={{flex: 2}}>
         {
           props.expenses ?
-            <List items={props.expenses}/>
+            <FlattendList items={props.expenses} styles={listStyles}/>
           : null
         }
       </View>

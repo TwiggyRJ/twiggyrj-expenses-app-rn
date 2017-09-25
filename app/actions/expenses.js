@@ -27,7 +27,7 @@ export function getExpenses() {
           type: 'Direct Debit',
           account: 'Current Account',
           recipient: 'GloboDex',
-          amount: 20.00,
+          amount: -20.00,
           date: '2017-08-28',
           recurring_date: 27,
           user_id: 1
@@ -38,7 +38,7 @@ export function getExpenses() {
           type: 'Payment',
           account: 'Current Account',
           recipient: 'Wagamamma',
-          amount: 45.50,
+          amount: -45.50,
           date: '2017-08-30',
           recurring_date: 0,
           user_id: 1
@@ -49,7 +49,7 @@ export function getExpenses() {
           type: 'Payment',
           account: 'Current Account',
           recipient: 'Network Rail',
-          amount: 24.50,
+          amount: -24.50,
           date: '2017-09-02',
           recurring_date: 0,
           user_id: 1
@@ -60,7 +60,7 @@ export function getExpenses() {
           type: 'Payment',
           account: 'Current Account',
           recipient: 'McDonalds',
-          amount: 6.75,
+          amount: -6.75,
           date: '2017-09-05',
           recurring_date: 0,
           user_id: 1
@@ -71,7 +71,7 @@ export function getExpenses() {
           type: 'Payment',
           account: 'Current Account',
           recipient: 'Asda',
-          amount: 23.91,
+          amount: -23.91,
           date: '2017-09-07',
           recurring_date: 0,
           user_id: 1
@@ -82,7 +82,7 @@ export function getExpenses() {
           type: 'Payment',
           account: 'Current Account',
           recipient: 'Sony PSN',
-          amount: 15.00,
+          amount: -15.00,
           date: '2017-09-10',
           recurring_date: 0,
           user_id: 1
@@ -113,7 +113,7 @@ export function getExpense() {
         type: 'Direct Debit',
         account: 'Current Account',
         recipient: 'GloboDex',
-        amount: 20.00,
+        amount: -20.00,
         date: '2017-08-28',
         recurring_date: 27,
         user_id: 1

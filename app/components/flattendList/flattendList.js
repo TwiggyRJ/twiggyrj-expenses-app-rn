@@ -6,11 +6,11 @@ import ListItem from '../listItem';
 const FlattendList = (props) => {
   return (
     <FlatList
-      style={styles.list}
+      style={[styles.list, props.styles.list]}
       key="expensesList"
       data={props.items}
       keyExtractor={(item, index) => item.id}
-      renderItem={({item, index}) => <Item item={item} index={index}/>}/>
+      renderItem={({item, index}) => <ListItem item={item} index={index} itemStyles={props.styles}/>}/>
   );
 };
 

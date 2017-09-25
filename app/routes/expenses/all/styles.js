@@ -1,7 +1,45 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
-export default StyleSheet.create({
+export const listStyles = StyleSheet.create({
+  list: {
+
+  },
+  listItem: {
+    padding: 10,
+    backgroundColor: 'transparent',
+    borderBottomColor: '#ffffff',
+    borderBottomWidth: 2
+  },
+  listItemActive: {
+    backgroundColor: '#ffffff',
+    borderTopColor: 'transparent',
+    borderBottomColor: 'transparent'
+  },
+  listItemActiveRemoved: {
+    backgroundColor: 'transparent',
+  },
+  listItemActive: {
+    backgroundColor: '#ffffff',
+    borderTopColor: 'transparent',
+    borderBottomColor: 'transparent'
+  },
+  listItemFirst: {
+    padding: 10,
+    borderTopColor: '#ffffff',
+    borderTopWidth: 2
+  },
+  listItemText: {
+    color: '#333',
+    fontSize: 16
+  },
+  listItemTitle: {
+    color: '#333',
+    fontSize: 20
+  },
+});
+
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
