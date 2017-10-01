@@ -45,12 +45,12 @@ android_library(
 
 android_build_config(
     name = "build_config",
-    package = "com.expensesapp",
+    package = "com.aaronfryer.budgiet",
 )
 
 android_resource(
     name = "res",
-    package = "com.expensesapp",
+    package = "com.aaronfryer.budgiet",
     res = "src/main/res",
 )
 

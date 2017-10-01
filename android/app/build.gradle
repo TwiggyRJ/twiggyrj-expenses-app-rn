@@ -96,7 +96,7 @@ android {
     buildToolsVersion "25.0.1"
 
     defaultConfig {
-        applicationId "com.expensesapp"
+        applicationId "com.aaronfryer.budgiet"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
@@ -104,7 +104,7 @@ android {
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
-        resValue "string", "build_config_package", "com.expensesapp"
+        resValue "string", "build_config_package", "com.aaronfryer.budgiet"
     }
     splits {
         abi {
