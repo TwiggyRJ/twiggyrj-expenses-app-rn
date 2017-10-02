@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, TextInput, TouchableWithoutFeedback } from 'react-native';
+import { Text, View, Image, StatusBar, TextInput, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 import videos from '../../config/videos';
 import images from '../../config/images';
@@ -9,6 +9,7 @@ import Button from '../../components/button/index';
 const Login = (props) => {
   return (
     <View style={styles.container}>
+      <StatusBar barStyle="light-content"/>
       <BGVideo video={videos.loginBackground}/>
       <Image style={styles.logo} source={images.logo}/>
       <View style={styles.spacer}/>

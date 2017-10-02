@@ -11,7 +11,7 @@ export default StyleSheet.create({
     fontSize: 18
   },
   expenditurePos: {
-    color: '#4CAF50',
+    color: '#43a047',
     fontSize: 18
   },
   header: {
@@ -26,8 +26,10 @@ export default StyleSheet.create({
   titleText: {
     textAlign: 'left',
     fontSize: 26,
+    color: '#000000'
   },
   subtitleText: {
-    fontSize: 20
+    fontSize: 20,
+    color: '#000000'
   }
 });
