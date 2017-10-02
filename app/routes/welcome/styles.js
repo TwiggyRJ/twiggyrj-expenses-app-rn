@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 export const listStyles = StyleSheet.create({
   list: {
@@ -79,5 +79,11 @@ export const styles = StyleSheet.create({
     color: '#FFF',
     fontSize: 16,
     marginTop: 20,
+  },
+  seperator: {
+    backgroundColor: 'rgba(255,255,255,0.25)',
+    height: 2,
+    width: Dimensions.get('window').width / 1.75,
+    marginTop: 20
   },
 });

@@ -25,6 +25,12 @@ export default StyleSheet.create({
     borderRadius: 6,
     paddingLeft: 15,
   },
+  logo: {
+    height: 175,
+    top: 50,
+    position: 'absolute',
+    resizeMode: 'contain'
+  },
   loginButton: {
     borderColor: 'rgba(255,255,255,0.75)',
     borderRadius: 6,
@@ -45,6 +51,9 @@ export default StyleSheet.create({
   },
   signupButtonText: {
     color: '#FFF',
+  },
+  spacer: {
+    height: 100
   },
   dividerText: {
     color: '#FFF',

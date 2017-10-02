@@ -14,7 +14,7 @@ const Welcome = (props) => {
       <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', width: Dimensions.get('window').width, marginTop: Dimensions.get('window').height / 6}}>
         <Text style={styles.titleText}>Welcome { props.user.name }</Text>
         <Button style={styles.loginButton} customStyles={ styles.button } textStyles={ styles.buttonText } text="Add a new Expense" onPress={() => {}}/>
-        <Text style={styles.dividerText}>OR</Text>
+        <View style={styles.seperator}/>
         <Button style={styles.signupButton} customStyles={ styles.button } textStyles={ styles.buttonText } text="View all Expenses" onPress={() => { props.navigator.push({screen: 'expensesApp.AllExpenses', title: 'All Expenses'}) }}/>
       </View>
       {

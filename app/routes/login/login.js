@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, TextInput } from 'react-native';
+import { Text, View, Image, TextInput, TouchableWithoutFeedback } from 'react-native';
 import styles from './styles';
 import videos from '../../config/videos';
 import images from '../../config/images';
@@ -10,11 +10,17 @@ const Login = (props) => {
   return (
     <View style={styles.container}>
       <BGVideo video={videos.loginBackground}/>
-      <Text style={styles.titleText}>Expenses App</Text>
+      <Image style={styles.logo} source={images.logo}/>
+      <View style={styles.spacer}/>
       <TextInput style={styles.textInput} underlineColorAndroid='rgba(0,0,0,0)' placeholder={'Enter email address'} placeholderTextColor={"#FFF"} />
       <TextInput style={styles.textInput} underlineColorAndroid='rgba(0,0,0,0)' placeholder={'Enter password'} placeholderTextColor={"#FFF"} secureTextEntry={true} />
       <Button style={styles.loginButton} customStyles={ styles.loginButton } textStyles={ styles.loginButtonText } text="Sign In" onPress={() => props.authenticate('john.doe@test.com', 'testing')}/>
-      <Text style={styles.dividerText}>OR</Text>
+      <TouchableWithoutFeedback onPress={() => alert('Reset Password Button')}>
+        <View>
+          <Text style={styles.forgottenPassword}>Forgotten Password?</Text>
+        </View>
+      </TouchableWithoutFeedback>
+      <View style={styles.seperator}/>
       <Button style={styles.signupButton} customStyles={ styles.signupButton } textStyles={ styles.signupButtonText } text="Sign Up" onPress={() => props.register()}/>
     </View>
   );
