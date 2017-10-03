@@ -37,7 +37,7 @@ class WelcomeContainer extends Component {
   render() {
     if (this.state.expenses) {
       return (
-        <Welcome user={this.props.users} expenses={this.state.expenses}/>
+        <Welcome user={this.props.users} expenses={this.state.expenses} navigator={this.props.navigator}/>
       );
     } else {
       return (

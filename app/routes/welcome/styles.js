@@ -1,7 +1,53 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
-export default StyleSheet.create({
+export const listStyles = StyleSheet.create({
+  list: {
+    paddingLeft: 40,
+    paddingRight: 40,
+    marginTop: 20
+  },
+  listItem: {
+    padding: 10,
+    backgroundColor: 'transparent',
+    borderBottomColor: 'rgba(255,255,255,0.25)',
+    borderBottomWidth: 2
+  },
+  listItemActive: {
+    backgroundColor: 'rgba(255,255,255,0.25)',
+    borderTopColor: 'transparent',
+    borderBottomColor: 'transparent'
+  },
+  listItemActiveRemoved: {
+    backgroundColor: 'transparent',
+  },
+  listItemActive: {
+    backgroundColor: 'rgba(255,255,255,0.25)',
+    borderTopColor: 'transparent',
+    borderBottomColor: 'transparent'
+  },
+  listItemFirst: {
+    padding: 10,
+    borderTopColor: 'rgba(255,255,255,0.25)',
+    borderTopWidth: 2
+  },
+  listItemTextActive: {
+    color: '#FFFFFF'
+  },
+  listItemTextActiveRemoved: {
+    color: '#FFFFFF'
+  },
+  listItemText: {
+    color: '#fff',
+    fontSize: 16
+  },
+  listItemTitle: {
+    color: '#fff',
+    fontSize: 20
+  },
+});
+
+export const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -14,12 +60,6 @@ export default StyleSheet.create({
     marginTop: 20,
     marginLeft: 35,
     marginRight: 35,
-  },
-  image: {
-      width: null,
-      height: null,
-      flex: 1,
-      resizeMode: 'cover',
   },
   titleText: {
     color: '#FFF',
@@ -38,15 +78,18 @@ export default StyleSheet.create({
     borderRadius: 6,
     paddingLeft: 15,
   },
-  loginButtonText: {
-    color: 'white',
-  },
-  signupButtonText: {
+  buttonText: {
     color: '#FFF',
   },
   dividerText: {
     color: '#FFF',
     fontSize: 16,
     marginTop: 20,
-  }
+  },
+  seperator: {
+    backgroundColor: 'rgba(255,255,255,0.25)',
+    height: 2,
+    width: Dimensions.get('window').width / 1.75,
+    marginTop: 20
+  },
 });
