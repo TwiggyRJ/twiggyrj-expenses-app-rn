@@ -31,6 +31,12 @@ export const listStyles = StyleSheet.create({
     borderTopColor: 'rgba(255,255,255,0.25)',
     borderTopWidth: 2
   },
+  listItemTextActive: {
+    color: '#FFFFFF'
+  },
+  listItemTextActiveRemoved: {
+    color: '#FFFFFF'
+  },
   listItemText: {
     color: '#fff',
     fontSize: 16

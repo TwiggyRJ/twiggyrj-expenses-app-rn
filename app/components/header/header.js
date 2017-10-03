@@ -8,8 +8,8 @@ const Header = (props) => {
       <Text style={styles.titleText}>All Your Expenses</Text>
       <Text style={styles.subtitleText}>From now to the end of the time</Text>
       <View style={styles.expenditureSummary}>
-        <Text style={styles.expenditurePos}>In: £5,500.00</Text>
-        <Text style={styles.expenditureNeg}>Out: £4,750.54</Text>
+        <Text style={styles.expenditurePos}>In: <Text>+£5,500.00</Text></Text>
+        <Text style={styles.expenditureNeg}>Out: <Text>-£4,750.54</Text></Text>
       </View>
     </View>
   );

@@ -7,9 +7,9 @@ export const listStyles = StyleSheet.create({
   },
   listItem: {
     padding: 10,
-    backgroundColor: 'transparent',
-    borderBottomColor: '#ffffff',
-    borderBottomWidth: 2
+    backgroundColor: '#FFFFFF',
+    borderBottomColor: '#F5F5F5',
+    borderBottomWidth: 1
   },
   listItemActive: {
     backgroundColor: '#ffffff',
@@ -17,17 +17,23 @@ export const listStyles = StyleSheet.create({
     borderBottomColor: 'transparent'
   },
   listItemActiveRemoved: {
-    backgroundColor: 'transparent',
+    backgroundColor: '#FFFFFF',
   },
   listItemActive: {
-    backgroundColor: '#ffffff',
+    backgroundColor: '#43a047',
     borderTopColor: 'transparent',
-    borderBottomColor: 'transparent'
+    borderBottomColor: 'transparent',
+  },
+  listItemTextActive: {
+    color: '#FFFFFF'
+  },
+  listItemTextActiveRemoved: {
+    color: '#333'
   },
   listItemFirst: {
     padding: 10,
     borderTopColor: '#ffffff',
-    borderTopWidth: 2
+    borderTopWidth: 1
   },
   listItemText: {
     color: '#333',
