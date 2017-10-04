@@ -11,5 +11,14 @@ Navigation.startSingleScreenApp({
 	screen: {
 		screen: 'expensesApp.Login',
 		title: 'Login'
-	}
+	},
+	drawer: {
+		right: {
+			screen: 'expensesApp.Drawer',
+		},
+		style: {
+      contentOverlayColor: 'rgba(0,0,0,0.25)',
+      rightDrawerWidth: 85
+    },
+	},
 });

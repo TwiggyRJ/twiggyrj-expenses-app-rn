@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Dimensions, Text, View, Image, TextInput, ListView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -6,10 +6,11 @@ import AllExpenses from './allExpenses';
 import Routes from '../../../config/routes';
 import { navConfig } from './navConfig';
 import { isAndroid, isIOS } from '../../../lib/platform';
+import { toggleDrawer } from '../../../lib/navigate';
 import _ from 'lodash';
 import * as expensesActions from '../../../actions/expenses';
 
-class AllExpensesContainer extends Component {
+class AllExpensesContainer extends PureComponent {
   static navigatorStyle = navConfig;
 
   constructor(props) {
@@ -32,11 +33,6 @@ class AllExpensesContainer extends Component {
 
   componentWillMount() {
     this.props.onGetExpenses();
-    this.forceUpdate();
-  }
-
-  shouldComponentUpdate() {
-    return true;
   }
 
   componentDidMount() {
@@ -82,7 +78,7 @@ class AllExpensesContainer extends Component {
       if (e.id === 'newExpense') {
         alert('Fabulous')
       } else if (e.id === 'sideMenu') {
-        //toggleDrawer('right', this.props.navigator);
+        toggleDrawer('right', this.props.navigator);
       }
     }
   }

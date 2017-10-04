@@ -3,4 +3,5 @@ export const navConfig = {
   statusBarColor: '#388E3C',
   navBarTextColor: '#FFFFFF',
   navBarButtonColor: '#FFFFFF',
+  screenBackgroundColor: '#FFFFFF',
 };

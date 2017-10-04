@@ -18,7 +18,7 @@ class LoginContainer extends Component {
     if (this.props.users !== 0) {
       this.props.navigator.push({
         screen: 'expensesApp.Welcome',
-        title: 'Welcome'
+        title: 'Overview'
       });
     }
   }
