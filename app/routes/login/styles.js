@@ -45,6 +45,7 @@ export default StyleSheet.create({
     marginLeft: 35,
     marginRight: 35,
     marginBottom: 20,
+    backgroundColor: 'transparent'
   },
   loginButtonText: {
     color: 'white',
@@ -79,6 +80,7 @@ export default StyleSheet.create({
   forgottenPassword: {
     fontSize: 16,
     color: '#ffffff',
-    marginBottom: 20
+    marginBottom: 20,
+    backgroundColor: 'transparent'
   },
 });
