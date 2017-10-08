@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { Dimensions, Text, View, Image, TextInput, ListView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
-import AllExpenses from './allExpenses';
+import CreateExpenses from './createExpenses';
 import Routes from '../../../config/routes';
 import { navConfig } from './navConfig';
 import { isAndroid, isIOS } from '../../../lib/platform';
@@ -10,7 +10,7 @@ import { toggleDrawer } from '../../../lib/navigate';
 import _ from 'lodash';
 import * as expensesActions from '../../../actions/expenses';
 
-class AllExpensesContainer extends PureComponent {
+class CreateExpensesContainer extends PureComponent {
   static navigatorStyle = navConfig;
 
   constructor(props) {
@@ -32,7 +32,7 @@ class AllExpensesContainer extends PureComponent {
   }
 
   componentWillMount() {
-    this.props.onGetExpenses();
+    //this.props.onGetExpenses();
   }
 
   componentDidMount() {
@@ -76,7 +76,7 @@ class AllExpensesContainer extends PureComponent {
   onNavigatorEvent(e) {
     if (e.type === 'NavBarButtonPress') {
       if (e.id === 'newExpense') {
-        this.props.navigator.push({screen: 'expensesApp.CreateExpenses', title: 'New Expense'})
+        alert('Fabulous')
       } else if (e.id === 'sideMenu') {
         toggleDrawer('right', this.props.navigator);
       }
@@ -93,7 +93,7 @@ class AllExpensesContainer extends PureComponent {
   render() {
     if (this.state.expenses) {
       return (
-        <AllExpenses expenses={this.state.expenses} onLayout={this.onLayout}/>
+        <CreateExpenses onLayout={this.onLayout}/>
       );
     } else {
       return (
@@ -120,4 +120,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllExpensesContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateExpensesContainer);

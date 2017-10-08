@@ -36,6 +36,7 @@ class DrawerContainer extends PureComponent {
         drawerItems: [
           {
             action: 'logout',
+            key: 'logoutButton',
             text: 'Logout'
           }
         ]
