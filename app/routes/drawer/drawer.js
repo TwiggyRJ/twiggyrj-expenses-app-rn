@@ -3,29 +3,18 @@ import { Text, TouchableOpacity, View } from 'react-native';
 import { isAndroid, isIOS } from '../../lib/platform';
 import { toggleDrawer } from '../../lib/navigate';
 import { isOdd } from '../../lib/math';
+import Item from './item';
 import styles from './styles';
 
 const Drawer = (props) => {
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Menu</Text>
-      <TouchableOpacity onPress={() => props.logout()}>
-        <View style={styles.button}>
-          <Text>
-            Logout
-          </Text>
-        </View>
-      </TouchableOpacity>
       {
-        isAndroid() ?
-          <TouchableOpacity onPress={() => props.close() }>
-            <View style={styles.button}>
-              <Text>
-                Close
-              </Text>
-            </View>
-          </TouchableOpacity>
-        : null
+        props.items.map((item) =>
+          <Item item={item.text} action={item.action} navigate={props.navigate} key={item.key}/>
+        )
       }
     </View>
   );

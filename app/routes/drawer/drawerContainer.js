@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import { AlertIOS, Platform } from 'react-native';
 import { toggleDrawer } from '../../lib/navigate';
+import { isAndroid, isIOS } from '../../lib/platform';
 import Icon from 'react-native-vector-icons/Ionicons';
 import Drawer from './drawer';
 import Routes from '../../config/routes';
@@ -12,9 +13,36 @@ class DrawerContainer extends PureComponent {
 
   constructor(props) {
     super(props);
-    this.state = { pages: null };
-    this.toggleDrawerHandler = this.toggleDrawerHandler.bind(this);
-    this.logout = this.logout.bind(this);
+
+    if (isAndroid()) {
+      this.state = {
+        pages: null,
+        drawerItems: [
+          {
+            action: 'logout',
+            key: 'logoutButton',
+            text: 'Logout'
+          },
+          {
+            action: 'close',
+            key: 'closeButton',
+            text: 'Close'
+          }
+        ]
+      };
+    } else if(isIOS()) {
+      this.state = {
+        pages: null,
+        drawerItems: [
+          {
+            action: 'logout',
+            text: 'Logout'
+          }
+        ]
+      };
+    }
+
+    this.navigate = this.navigate.bind(this);
   }
 
   componentDidUpdate() {
@@ -23,31 +51,18 @@ class DrawerContainer extends PureComponent {
     }
   }
 
-  toggleDrawerHandler() {
-    let iconPrefix;
-    if (Platform.OS === "ios") {
-      iconPrefix = "ios";
-    } else {
-      iconPrefix = "md";
-    }
-    Icon.getImageSource(iconPrefix + '-menu', 30, 'white').then((menu) => {
-      this.props.navigator.setButtons({
-        rightButtons: [
-          { id: 'navHamburger', disableIconTint: true, icon: menu },
-        ]
-      });
+  navigate(action) {
+    if (action === 'logout') {
+      //this.props.onLogout();
+      this.props.navigator.handleDeepLink({ link: 'Login/expensesApp.Login'})
+    } else if(action === 'close') {
       toggleDrawer('right', this.props.navigator);
-    });
-  }
-
-  logout() {
-    this.props.onLogout();
-    this.props.navigator.handleDeepLink({ link: 'Login/blenheimProductivity.Login'})
+    }
   }
 
   render() {
     return (
-      <Drawer navigator={ this.props.navigator } page={ this.state.pages } close={ this.toggleDrawerHandler } logout={ this.logout }/>
+      <Drawer navigator={ this.props.navigator } page={ this.state.pages } navigate={ this.navigate } items={ this.state.drawerItems }/>
     );
   }
 }

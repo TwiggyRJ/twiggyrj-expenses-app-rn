@@ -1,5 +1,7 @@
+import { primaryAccentColour } from '../../../config/styles';
+
 export const navConfig = {
-  navBarBackgroundColor: '#43a047',
+  navBarBackgroundColor: primaryAccentColour,
   statusBarColor: '#388E3C',
   navBarTextColor: '#FFFFFF',
   navBarButtonColor: '#FFFFFF',

@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
+import { primaryAccentColour } from '../../../config/styles';
 
 export const listStyles = StyleSheet.create({
   list: {
@@ -11,16 +12,11 @@ export const listStyles = StyleSheet.create({
     borderBottomColor: '#F5F5F5',
     borderBottomWidth: 1
   },
-  listItemActive: {
-    backgroundColor: '#ffffff',
-    borderTopColor: 'transparent',
-    borderBottomColor: 'transparent'
-  },
   listItemActiveRemoved: {
     backgroundColor: '#FFFFFF',
   },
   listItemActive: {
-    backgroundColor: '#43a047',
+    backgroundColor: primaryAccentColour,
     borderTopColor: 'transparent',
     borderBottomColor: 'transparent',
   },
@@ -60,10 +56,10 @@ export const styles = StyleSheet.create({
     marginRight: 35,
   },
   image: {
-      width: null,
-      height: null,
-      flex: 1,
-      resizeMode: 'cover',
+    width: null,
+    height: null,
+    flex: 1,
+    resizeMode: 'cover',
   },
   titleText: {
     color: '#333',

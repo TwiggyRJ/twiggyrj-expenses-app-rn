@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Platform } from 'react-native';
+import { primaryAccentColour } from '../../config/styles';
 
 export default StyleSheet.create({
   container: {
@@ -12,9 +13,12 @@ export default StyleSheet.create({
     borderBottomColor: '#F5F5F5'
   },
   buttonActive: {
-    backgroundColor: '#43a047',
+    backgroundColor: primaryAccentColour,
     borderTopColor: 'transparent',
     borderBottomColor: 'transparent',
+  },
+  buttonActiveRemoved: {
+    backgroundColor: '#FFFFFF'
   },
   buttonTextActive: {
     color: '#FFFFFF'
@@ -27,5 +31,5 @@ export default StyleSheet.create({
     lineHeight: 28,
     padding: 20,
     color: '#333333'
-  }
+  },
 });
