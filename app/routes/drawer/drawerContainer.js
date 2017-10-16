@@ -19,6 +19,11 @@ class DrawerContainer extends PureComponent {
         pages: null,
         drawerItems: [
           {
+            action: 'create',
+            key: 'createButton',
+            text: 'Add new Expense'
+          },
+          {
             action: 'logout',
             key: 'logoutButton',
             text: 'Logout'
@@ -34,6 +39,11 @@ class DrawerContainer extends PureComponent {
       this.state = {
         pages: null,
         drawerItems: [
+          {
+            action: 'create',
+            key: 'createButton',
+            text: 'Add new Expense'
+          },
           {
             action: 'logout',
             key: 'logoutButton',
@@ -58,6 +68,9 @@ class DrawerContainer extends PureComponent {
       this.props.navigator.handleDeepLink({ link: 'Login/expensesApp.Login'})
     } else if(action === 'close') {
       toggleDrawer('right', this.props.navigator);
+    } else if(action === 'create') {
+      toggleDrawer('right', this.props.navigator);
+      this.props.navigator.push({screen: 'expensesApp.CreateExpenses', title: 'New Expense'});
     }
   }
 

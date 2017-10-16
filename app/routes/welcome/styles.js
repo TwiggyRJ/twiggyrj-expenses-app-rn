@@ -5,7 +5,9 @@ export const listStyles = StyleSheet.create({
   list: {
     paddingLeft: 40,
     paddingRight: 40,
-    marginTop: 20
+    marginTop: 20,
+    marginBottom: 0,
+    paddingBottom: 0
   },
   listItem: {
     padding: 10,
@@ -52,7 +54,14 @@ export const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+    backgroundColor: '#d81b60'
+  },
+  header: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: Dimensions.get('window').width,
+    marginTop: Dimensions.get('window').height / 6
   },
   button: {
     backgroundColor: 'rgba(255,255,255,0.25)',

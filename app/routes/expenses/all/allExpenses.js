@@ -15,7 +15,6 @@ const AllExpenses = (props) => {
           : null
         }
       </View>
-      <View style={{height: 10}}/>
     </View>
   );
 };

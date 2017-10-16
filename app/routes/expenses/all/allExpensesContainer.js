@@ -76,7 +76,7 @@ class AllExpensesContainer extends PureComponent {
   onNavigatorEvent(e) {
     if (e.type === 'NavBarButtonPress') {
       if (e.id === 'newExpense') {
-        this.props.navigator.push({screen: 'expensesApp.CreateExpenses', title: 'New Expense'})
+        this.props.navigator.push({screen: 'expensesApp.CreateExpenses', title: 'New Expense'});
       } else if (e.id === 'sideMenu') {
         toggleDrawer('right', this.props.navigator);
       }

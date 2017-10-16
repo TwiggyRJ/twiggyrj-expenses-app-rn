@@ -11,7 +11,7 @@ const Welcome = (props) => {
   return (
     <View style={styles.container}>
       <BGVideo video={videos.loginBackground}/>
-      <View style={{flex: 1, justifyContent: 'center', alignItems: 'center', width: Dimensions.get('window').width, marginTop: Dimensions.get('window').height / 6}}>
+      <View style={styles.header}>
         <Text style={styles.titleText}>Welcome { props.user.name }</Text>
         <Button style={styles.loginButton} customStyles={ styles.button } textStyles={ styles.buttonText } text="Add a new Expense" onPress={() => {}}/>
         <View style={styles.seperator}/>

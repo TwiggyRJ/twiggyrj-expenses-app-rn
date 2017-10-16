@@ -18,7 +18,7 @@ export default StyleSheet.create({
     alignItems: 'flex-start',
     backgroundColor: '#fff',
     elevation: 1,
-    flex: 1,
+    flex: 0.75,
     justifyContent: 'flex-start',
     padding: 20,
     width: Dimensions.get('window').width,

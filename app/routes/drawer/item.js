@@ -18,7 +18,7 @@ export default class DrawerItem extends Component {
 
   render() {
     return(
-      <TouchableWithoutFeedback onPress={() => this.props.navigate(this.props.action)} onPressIn={() => this.setState({itemStyle: styles.buttonActive, itemTextStyle: styles.buttonTextActive})} onPressOut={() => this.setState({itemStyle: styles.buttonActiveRemoved, itemTextStyle: styles.buttonTextActiveRemoved})}>
+      <TouchableWithoutFeedback onPress={() => this.props.navigate(this.props.action)} onPressIn={() => this.setState({itemStyle: styles.buttonActive, itemTextStyle: styles.buttonTextActive})} onPressOut={() => this.setState({itemStyle: null, itemTextStyle: null})}>
         <View style={[styles.button, this.state.itemStyle]}>
           <Text style={[styles.buttonText, this.state.itemTextStyle]}>
             { this.props.item }
